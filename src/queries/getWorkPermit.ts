@@ -1,19 +1,12 @@
 // queries/getWorkPermit.ts
-import datoCMSClient from './datoCMSClient';
 import { WorkPermit } from '../types';
 
-const GET_WORK_PERMIT = `
-  query {
-    workPermit {
-      visaStatus
-      expiryDate
-      summary
-      additionalInfo
-    }
-  }
-`;
-
 export async function getWorkPermit(): Promise<WorkPermit> {
-  const data = await datoCMSClient.request<{ workPermit: WorkPermit }>(GET_WORK_PERMIT);
-  return data.workPermit;
+  // Hardcoded Avadhoot Pawaskar work permit data
+  return {
+    visaStatus: 'Student Visa (Tier 4)',
+    expiryDate: new Date('2026-05-31'),
+    summary: 'Currently studying at a UK university with valid work permissions.',
+    additionalInfo: 'Eligible for part-time work during studies and full-time work during holidays.'
+  };
 }

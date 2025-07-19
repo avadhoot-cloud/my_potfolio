@@ -1,25 +1,13 @@
 // queries/getProfileBanner.ts
-import datoCMSClient from './datoCMSClient';
 import { ProfileBanner } from '../types';
 
-const GET_PROFILE_BANNER = `
- {
-  profilebanner {
-    backgroundImage {
-      url
-    }
-    headline
-    resumeLink {
-      url
-    }
-    linkedinLink
-    profileSummary
-  }
-}
-`;
-
 export async function getProfileBanner(): Promise<ProfileBanner> {
-  const data = await datoCMSClient.request<{ profilebanner: ProfileBanner }>(GET_PROFILE_BANNER);
-  console.log("🚀 ~ getProfileBanner ~ data:", data)
-  return data.profilebanner;
+  // Hardcoded Avadhoot Pawaskar data
+  return {
+    backgroundImage: { url: '/static/media/blue.png' }, // Use a suitable banner image
+    headline: 'Avadhoot Pawaskar',
+    resumeLink: { url: '/Avadhoot_resume.pdf' },
+    linkedinLink: 'https://www.linkedin.com/in/avadhoot-pawaskar-223809279',
+    profileSummary: 'Full Stack Web Developer | Cloud & DevOps Enthusiast | React | Node.js | Django | Flutter | AWS | GCP | DevOps | Open to new opportunities and collaborations.'
+  };
 }

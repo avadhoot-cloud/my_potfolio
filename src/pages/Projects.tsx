@@ -23,7 +23,7 @@ const techIcons: { [key: string]: JSX.Element } = {
   'ECS': <FaAws />,
   'Jenkins': <FaJenkins />,
   'Docker': <FaDocker />,
-  'GraphQL': <FaDatabase />,
+
   'CI/CD': <FaGitlab />,
   'GitLab': <FaGitlab />,
   'GitHub': <FaGithub />,

@@ -1,25 +1,16 @@
 // queries/getContactMe.ts
-import datoCMSClient from './datoCMSClient';
 import { ContactMe } from '../types';
 
-const GET_CONTACT_ME = `
-  query {
-    contactMe {
-      profilePicture {
-        url
-      }
-      name
-      title
-      summary
-      companyUniversity
-      linkedinLink
-      email
-      phoneNumber
-    }
-  }
-`;
-
 export async function getContactMe(): Promise<ContactMe> {
-  const data = await datoCMSClient.request<{ contactMe: ContactMe }>(GET_CONTACT_ME);
-  return data.contactMe;
+  // Hardcoded Avadhoot Pawaskar data
+  return {
+    profilePicture: { url: require('../images/avadhoot.jpg') }, // You may need to add your image to images folder
+    name: 'Avadhoot Pawaskar',
+    title: 'Full Stack Web Developer | Cloud & DevOps Enthusiast',
+    summary: 'Engineer with a passion for building scalable web and cloud solutions. Experienced in React, Node.js, Django, Flutter, AWS, GCP, and DevOps. Open to new opportunities and collaborations.',
+    companyUniversity: 'DON BOSCO INSTITUTE OF TECHNOLOGY, Mumbai',
+    linkedinLink: 'https://www.linkedin.com/in/avadhoot-pawaskar-223809279',
+    email: 'avadhoot.pawaskar23@gmail.com',
+    phoneNumber: '9004722004',
+  };
 }
