@@ -2,14 +2,14 @@
 
 import React from 'react';
 import './Reading.css';
-import atomicHabits from '../images/atomic_habits.jpg';
-import richDadPoorDad from '../images/rich_dad_poor_dad.jpg';
-import alchemist from '../images/alchemist.jpg';
-import eatThatFrog from '../images/eat_that_frog.jpg';
-// import vijayanikiAidhuMetlu from '../images/vijayaniki_aidu_metlu.jpg';
-// import venneloAdapilla from '../images/vennelo_adapilla.jpeg';
+import atomicHabits from '../images/atomic_habits.webp';
+import richDadPoorDad from '../images/rich_dad_poor_dad.webp';
+import alchemist from '../images/alchemist.webp';
+import eatThatFrog from '../images/eat_that_frog.webp';
+// import vijayanikiAidhuMetlu from '../images/vijayaniki_aidu_metlu.webp';
+// import venneloAdapilla from '../images/vennelo_adapilla.webp';
 // Placeholder for The Intelligent Investor cover
-import intelligentInvestor from '../images/intelligent_investor.jpg';
+import intelligentInvestor from '../images/intelligent_investor.webp';
 
 const books = [
   {

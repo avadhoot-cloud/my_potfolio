@@ -1,60 +1,42 @@
 import React from 'react';
 import './Blogs.css';
-import { FaMedium, FaDev } from 'react-icons/fa';
 
-const blogs = [
+const experiences = [
   {
-    title: "Deploying React Apps on AWS S3 & CloudFront",
-    platform: "Medium",
-    icon: <FaMedium />,
-    link: "https://medium.com/@avadhootpawaskar/deploying-react-apps-on-aws-s3-cloudfront-1234567890ab",
-    description: "A step-by-step guide to hosting your React portfolio on AWS S3 and CloudFront, with tips for performance and security.",
+    title: "Building a CRM with JavaFX and MySQL",
+    description: "Designed and implemented a desktop CRM for fitness studios. Learned about database design, JavaFX UI, and integrating authentication.",
   },
   {
-    title: "Building a CRM with JavaFX and MySQL: My Approach",
-    platform: "Dev.to",
-    icon: <FaDev />,
-    link: "https://dev.to/avadhootpawaskar/building-a-crm-with-javafx-and-mysql-my-approach-abcdef123456",
-    description: "How I designed and implemented a desktop CRM for fitness studios, including lessons learned and best practices.",
+    title: "End-to-End MERN Stack Project",
+    description: "Built and deployed a full-stack MERN application. Gained experience in REST APIs, JWT auth, and CI/CD pipelines.",
   },
   {
-    title: "End-to-End MERN Stack Project: Lessons Learned",
-    platform: "Medium",
-    icon: <FaMedium />,
-    link: "https://medium.com/@avadhootpawaskar/end-to-end-mern-stack-project-lessons-learned-9876543210ab",
-    description: "Insights from building and deploying a full-stack MERN application, from planning to production.",
+    title: "React Portfolio on AWS S3 & CloudFront",
+    description: "Deployed my React portfolio using AWS S3 and CloudFront. Learned about static hosting, CDN, and performance optimization.",
   },
   {
-    title: "Cloud Certifications: How I Prepared for AWS & GCP Exams",
-    platform: "Dev.to",
-    icon: <FaDev />,
-    link: "https://dev.to/avadhootpawaskar/cloud-certifications-how-i-prepared-for-aws-gcp-exams-1234abcd5678",
-    description: "My personal roadmap, resources, and tips for passing cloud certification exams as a student and developer.",
+    title: "DevOps Automation with GitHub Actions",
+    description: "Set up CI/CD pipelines for multiple projects using GitHub Actions. Automated testing, builds, and deployments.",
   },
   {
-    title: "Automating DevOps Workflows with GitHub Actions",
-    platform: "Medium",
-    icon: <FaMedium />,
-    link: "https://medium.com/@avadhootpawaskar/automating-devops-workflows-with-github-actions-abcdef987654",
-    description: "A practical guide to setting up CI/CD pipelines for your projects using GitHub Actions.",
+    title: "Cloud Certifications Preparation",
+    description: "Prepared for AWS & GCP exams by building hands-on projects and using cloud services in real scenarios.",
   },
 ];
 
 const Blogs: React.FC = () => {
   return (
     <div className="blogs-container">
-      <h2 className="blogs-title">✍️ My Blog Posts</h2>
-      <p className="blogs-intro">A collection of my thoughts, tutorials, and real-world experiences in software and cloud development.</p>
+      <h2 className="blogs-title">🚀 My Experience in Building Projects</h2>
+      <p className="blogs-intro">Here are some highlights and lessons learned from my journey building real-world software projects.</p>
       <div className="blogs-grid">
-        {blogs.map((blog, index) => (
-          <a href={blog.link} key={index} target="_blank" rel="noopener noreferrer" className="blog-card" style={{ '--delay': `${index * 0.2}s` } as React.CSSProperties}>
-            <div className="blog-icon animated-icon">{blog.icon}</div>
+        {experiences.map((exp, index) => (
+          <div key={index} className="blog-card" style={{ '--delay': `${index * 0.2}s` } as React.CSSProperties}>
             <div className="blog-info animated-text">
-              <h3 className="blog-title">{blog.title}</h3>
-              <p className="blog-description">{blog.description}</p>
-              <span className="blog-platform">{blog.platform}</span>
+              <h3 className="blog-title">{exp.title}</h3>
+              <p className="blog-description">{exp.description}</p>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>

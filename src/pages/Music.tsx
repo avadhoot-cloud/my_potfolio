@@ -1,15 +1,15 @@
 import React from 'react';
 import './Music.css';
-import oneDirectionCover from '../images/one_direction_midnight_memories.png';
-import brunoMarsCover from '../images/bruno_mars_24k_magic.jpg';
-import natashaCover from '../images/natasha_bedingfield_unwritten.png';
+import oneDirectionCover from '../images/one_direction_midnight_memories.webp';
+import brunoMarsCover from '../images/bruno_mars_24k_magic.webp';
+import natashaCover from '../images/natasha_bedingfield_unwritten.webp';
 import arijitCover from '../images/arijit_singh.webp';
-import abhijeetCover from '../images/abhijeet.jpg';
-import edSheeranCover from '../images/ed_sheeran_divide.jpeg';
-import taylorSwiftCover from '../images/taylor_swift_1989.png';
-import duaLipaCover from '../images/dua_lipa_future_nostalgia.png';
-import justinBieberCover from '../images/justin_bieber_purpose.png';
-import shawnMendesCover from '../images/shawn_mendes_illuminate.png';
+import abhijeetCover from '../images/abhijeet.webp';
+import edSheeranCover from '../images/ed_sheeran_divide.webp';
+import taylorSwiftCover from '../images/taylor_swift_1989.webp';
+import duaLipaCover from '../images/dua_lipa_future_nostalgia.webp';
+import justinBieberCover from '../images/justin_bieber_purpose.webp';
+import shawnMendesCover from '../images/shawn_mendes_illuminate.webp';
 
 const genres = [
   'Feel Good',
